@@ -1,0 +1,564 @@
+:root {
+  --primary-dark-violet: hsl(256, 26%, 20%);
+  --primary-grayish-blue: hsl(216, 30%, 68%);
+  --neutral-very-dark-violet: hsl(270, 9%, 17%);
+  --neutral-dark-grayish-blue: hsl(273, 4%, 51%);
+  --neutral-very-light-gray: hsl(0, 0%, 98%);
+  --headings-DM-serif-display: "DM Serif Display", serif;
+  --body-karla: "Karla", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.activeBody {
+  position: fixed;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1.7rem;
+  justify-content: space-between;
+}
+
+.navMobile {
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  padding-top: 4rem;
+  position: absolute;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.active {
+  display: flex;
+}
+
+.navMobile ul {
+  gap: 15px;
+  display: flex;
+  list-style: none;
+  position: relative;
+  border-radius: 5px;
+  align-items: center;
+  padding: 2.7rem 2.5rem;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid rgb(75, 75, 75);
+}
+
+.iconClose {
+  width: 1rem;
+  top: 0.8rem;
+  right: 0.8rem;
+  position: absolute;
+}
+
+.navMobile ul li {
+  font-weight: 700;
+  font-family: var(--body-karla);
+  color: var(--neutral-dark-grayish-blue);
+}
+
+.navMobile ul li:last-child {
+  padding: 10px 20px;
+  color: rgb(75, 75, 75);
+  border: 1px solid rgb(75, 75, 75);
+}
+
+.navDesktop {
+  display: none;
+}
+
+.bgIntroLeftDesktop,
+.bgIntroRightDesktop,
+.imageIntroDesktop {
+  display: none;
+}
+
+.introContainer {
+  width: 100vw;
+  margin-bottom: 9rem;
+  background-color: var(--primary-dark-violet);
+}
+
+.imageIntroMobile {
+  width: 100%;
+}
+
+.informationIntroContainer {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  padding: 5.7rem 1.7rem;
+}
+
+.bgIntroLeftMobileContainer {
+  left: 0;
+  top: -3px;
+  position: absolute;
+}
+
+.bgIntroRightMobileContainer {
+  right: 0;
+  bottom: -175px;
+  position: absolute;
+}
+
+.titleIntro {
+  z-index: 1;
+  color: white;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 2.7rem;
+  font-family: var(--headings-DM-serif-display);
+}
+
+.hrTitleIntro{
+  display: none;
+}
+
+.textIntro {
+  color: white;
+  padding: 4px;
+  text-align: center;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--body-karla);
+}
+
+.btnIntro {
+  color: white;
+  padding: 10px 25px;
+  border: 2px solid white;
+  font-family: var(--body-karla);
+}
+.informationPageContainer{
+    padding: 0 2rem;
+  }
+
+.hrIntro {
+  width: 45%;
+  margin: 0px auto;
+  margin-bottom: 2rem;
+  border-bottom: none;
+  border: 1px solid var(--neutral-dark-grayish-blue);
+}
+
+.titleCards {
+  font-size: 2.7rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: var(--neutral-very-dark-violet);
+  font-family: var(--headings-DM-serif-display);
+}
+
+.cardsContainer {
+  display: flex;
+  
+  margin-bottom: 4rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.7rem;
+  flex-direction: column;
+}
+
+.iconCard {
+  margin-bottom: 1.4rem;
+}
+
+.titleCard {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--neutral-very-dark-violet);
+  font-family: var(--headings-DM-serif-display);
+}
+
+.textCard {
+  text-align: center;
+  line-height: 1.7rem;
+  font-size: 1.1rem;
+  font-family: var(--body-karla);
+  color: var(--neutral-dark-grayish-blue);
+}
+
+.howWeWorkContainer {
+  display: flex;
+  padding: 4.45rem 2rem;
+  position: relative;
+  margin-bottom: 7rem;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--primary-dark-violet);
+}
+
+.mobileIconWeWork {
+  top: 0;
+  right: 0;
+  z-index: 0;
+  position: absolute;
+}
+
+.howWeWorkContainer h2 {
+  z-index: 1;
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  position: relative;
+  line-height: 2.7rem;
+  margin-bottom: 3rem;
+  font-family: var(--headings-DM-serif-display);
+}
+
+.howWeWorkContainer p {
+  color: white;
+  padding: 10px 25px;
+  border: 2px solid white;
+  font-family: var(--body-karla);
+}
+
+.desktopIconWeWork{
+  display: none;
+}
+
+footer {
+  background-color: var(--neutral-very-light-gray);
+  padding: 0 2rem;
+  position: relative;
+}
+
+.iconsContaner {
+  position: relative;
+  padding: 4.6rem 2rem 1rem 2rem;
+}
+
+.bgFooterDesktop {
+  display: none;
+}
+
+.bgFooterMobile{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.logoFooter {
+  z-index: 2;
+  padding: 1rem 1rem 1.6rem 1rem;
+  text-align: center;
+  
+}
+
+.iconsFooter {
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  gap: 1.1rem;
+  margin-bottom: 1.4rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.hrFooter {
+  border-bottom: none;
+  margin-bottom: 2.5rem;
+  border: 1px solid #EAEAEA;
+}
+
+.navFooterContainer {
+  display: flex;
+  align-items: center;
+  padding-bottom: 3rem;
+  flex-direction: column;
+  font-family: var(--body-karla);
+}
+
+.navFooterContainer section{
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  flex-direction: column;
+}
+
+.navFooterContainer section h3{
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--neutral-dark-grayish-blue);
+}
+
+.navFooterContainer section span{
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--neutral-very-dark-violet);
+}
+
+
+@media screen and (min-width: 1440px) {
+
+  .header {
+    gap: 10rem;
+    padding: 1.5rem;
+    justify-content: space-around;
+    z-index: 2;
+    position: relative;
+    background-color: white;
+  }
+
+  .btnMenuContainer {
+    display: none;
+  }
+
+  .navDesktop {
+    display: inline;
+  }
+
+  .navDesktop ul {
+    gap: 1.7rem;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .navDesktop ul li {
+    font-weight: 700;
+    font-family: var(--body-karla);
+    color: var(--neutral-dark-grayish-blue);
+  }
+  
+  .navDesktop ul li:last-child {
+    padding: 10px 20px;
+    color: rgb(75, 75, 75);
+    border: 1px solid rgb(75, 75, 75);
+  }
+  .introContainer{
+    display: flex;
+    position: relative;
+    padding: 2rem 0rem;
+    margin-bottom: 20rem;
+  }
+  .informationIntroContainer{
+   width: 58%;
+   padding: 5rem 8rem;
+   align-items: flex-start;
+    
+  }
+  .informationIntroContainer p{
+    text-align: left;
+    font-size: 1.05rem;
+  }
+  .informationIntroContainer h2{
+    text-align: left;
+    width: 80%;
+    font-size: 3.99rem ;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+  .hrTitleIntro{
+    display: inline;
+    width: 10rem;
+    color: white;
+    margin-bottom: 3rem;
+  }
+  
+  .bgIntroLeftMobileContainer {
+    display: none;
+  }
+
+  .bgIntroRightMobileContainer {
+    display: none;
+  }
+  .bgIntroLeftDesktop{
+    display: inline;
+    position: absolute;
+    bottom: -21rem;
+  }
+  .bgIntroRightDesktop{
+    display: inline;
+    position: absolute;
+    top: -4.6rem;
+    right: 0;
+  }
+  .imageIntroMobile {
+    display: none;
+  }
+  .imageIntroDesktop{
+    position: absolute;
+    display: inline;
+    right: 10rem;
+    top: 6.5rem;
+  }
+
+  .informationPageContainer{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: left;
+    padding: 0rem 10rem;
+  }
+  
+  .bgFooterDesktop {
+    flex-direction: row;
+    justify-content: right;
+  }
+
+  .hrIntro {
+    text-align:left;
+    width: 13%;
+    margin: 0;
+    margin-bottom: 4rem;
+  }
+  .titleCards{
+    text-align: left;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .cardsContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .card {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .iconCard {
+    margin-bottom: 1.4rem;
+    align-items: left;
+    margin-right: 10px;
+  }
+  
+  .titleCard {
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+  }
+  
+  .textCard {
+    text-align: left;
+    font-size: 1.02rem;
+  }
+
+  .howWeWorkContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    padding: 4.3rem 4.8rem;
+    margin-bottom: 10rem;
+  }
+
+  .mobileIconWeWork{
+    display: none;
+  }
+
+  .desktopIconWeWork{
+    top: 0;
+    right: 0;
+    z-index: 0;
+    display: inline;
+    position: absolute;
+  }
+
+  .desktopIconWeWork{
+    height: 100%;
+  }
+
+  .howWeWorkContainer h2{
+    font-size: 3.6rem;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 55%;
+    line-height: 3.5rem;
+  }
+
+  .howWeWorkContainer p{
+    position: relative;
+    z-index: 3;
+    font-size: 1.1rem
+  }
+  footer {
+    padding: 0 9rem;
+    padding-bottom: 2rem; 
+  }
+  .bgFooterMobile {
+    display: none;
+  }
+
+  .bgFooterDesktop {
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .hrFooter {
+    width: 100%;
+  }
+
+  .navFooterContainer {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    position: relative;
+    z-index: 3;
+    gap: 12rem;
+    
+  }
+
+  .navFooterContainer section {
+    padding: 0;
+    align-items: flex-start;
+  }
+  .iconsContaner{
+    display: flex;
+    padding: 4rem 0 2rem 0;
+  }
+ 
+  .logoFooter{
+    padding: 0;
+  }
+
+  .iconsFooter{
+    margin: 0;
+  }
+
+  .iconsFooter{
+    justify-content: end; 
+  }
+
+}
